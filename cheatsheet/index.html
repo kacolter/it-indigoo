@@ -6,9 +6,53 @@
     <meta name="description" content="placeholder" />
     <meta name="author" content="Kylie Colter" />
     <title>HTML Cheatsheet</title>
+    <style>
+    input, textarea, label{
+      display:block;
+    }
+  </style>
 </head>
 <body>
     <h1>HTML5 Cheatsheet</h1>
+      <section id="structural-elements">
+    <h2>Structural Elements</h2>
+    <!-- Preformat -->
+    <pre> <!--"pre" formats the text exactly how it's written; HTML gets rid of unnecessary spaces but "pre" allows you to keep those spaces-->
+        <code>&lt;main&gt;</code>
+        <code>&lt;section&gt;</code>
+        <code>&lt;nav&gt;</code>
+        <code>&lt;header&gt;</code>
+        <code>&lt;footer&gt;</code>
+        <code>&lt;aside&gt;</code>
+        <code>&lt;article&gt;</code>
+        <code>&lt;figure&gt;</code>
+        <code>&lt;figcaption&gt;</code>
+    </pre>
+  </section>
+    <section id="text-level-semantics">
+    <h2>Text Level Semantics</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<del> Laudantium repudiandae blanditiis aliquid </del>et alias veniam distinctio doloribus pariatur <em>explicabo!</em> Asperiores in <strong>ratione</strong> voluptate a doloribus sed ipsum ex quia nesciunt tempore harum aperiam, corrupti itaque modi ut ducimus <sub>tenetur tempora</sub> laudantium quod beatae fugiat <br /> rem necessitatibus? Pariatur repellat voluptatum consequuntur!
+    </p>
+  </section>
+  <section id="forms">
+    <form action="processing-script.php" method="post">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="cust-name">Customer Name:</label>
+        <input type="text" id="cust-name" name="cust-name" placeholder="501-555-5555"/>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+        <label for="fav-color">Favorite Color</label>
+        <select id="fav-color" name="fav-color">
+          <option value="R">Red</option>
+          <option value="G">Green</option>
+          <option value="B">Blue</option>
+          <option selected>---</option>
+        </select>
+        <input type="submit" value="Take me to your leader"/>
+      </fieldset>
+    </form>
+  </section>
     <section id="headings">
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -59,5 +103,37 @@
         <h3>Inline Quote</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque! <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dignissimos eligendi saepe suscipit pariatur?</q></p>
     </section>
+    <section id="hyperlinks">
+        <h2>Hyperlinks</h2>
+        <ul>
+            <li><a href="resources/about.html">Relative Link</a></li>
+            <li><a href="#headings">Anchor Link</a></li>
+            <li><a href="https://ualr.edu">Absolute Link</a></li>
+            <!--to open a new tab with a link use the attribute "target=_blank"-->
+            <li><a href="mailto:mail@ualr.edu">Email</a></li> 
+            <!--tries to use default mail application and open it; best to avoid-->
+        </ul>
+    </section>
+    <section id="table">
+        <caption>Sample Table</caption>
+        <h2>Table</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Food</td>
+                <td>12</td>
+                <td>12.50</td>
+            </tr>
+        </table>
+    </section>
+    <section id="images">
+        <h2>Images</h2>
+        <img src="assets/img/si.jpg" alt="The Smashing Pumpkins Siamese Dream" />
+    </section>
+
 </body>
 </html>
