@@ -1,4 +1,8 @@
 body{
     background-color: rgb(129, 99, 134);
-    font-family: "Fondamento", cursive;
+    font-family: "Quicksand", sans-serif;
+}
+
+h1{
+    color: #fff;
 }
