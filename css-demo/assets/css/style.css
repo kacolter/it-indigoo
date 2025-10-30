@@ -5,7 +5,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+ /*-------Utility Classes-------*/
+.container{
+    margin:auto;
+    padding:40px;
+}
 body{
     font-family: "Quicksand", sans-serif;
     background-color: #5F4853;
@@ -17,4 +21,30 @@ main{
     margin: 40px auto;
     border: 2px solid #000;
     border-radius: 10px;
+    text-align:center;
+}
+
+header.primary{
+    padding:20px; 
+    background-image:url("../img/bg_1.png"); 
+    background-repeat:no-repeat;  
+    background-size:cover;  
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.hgroup h1 a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  
+}
+
+.hgroup h1, .hgroup h2{
+  margin: 0px;
+}
+
+div.hgroup h2{
+  color: #fff;
 }
