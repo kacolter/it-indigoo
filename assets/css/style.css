@@ -6,12 +6,20 @@ body{
 }
 main{
     background-color: #fbdbe6;
-    border: #54311a solid 3px;
+    border: hsl(24, 53%, 22%) solid 3px;
+    width: 85%;
+    height: 85%;
+    margin: 25px auto;
 }
 main.container{
-    width: 420px;
+    width: 75%;
+    height: 75%;
 }
 nav a:link, nav a:visited{
     text-decoration: none;
+    color: #54311a;
+}
 
+h1{
+    text-align: center;
 }
