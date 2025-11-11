@@ -21,7 +21,7 @@ main{
     margin: 40px auto;
     border: 2px solid #000;
     border-radius: 10px;
-    text-align:center;
+    /* text-align:center; */
 }
 
 header.primary{
@@ -34,6 +34,31 @@ header.primary{
     justify-content: space-between;
 }
 
+header.primary nav{
+  width: 30%;
+}
+header.primary nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header.primary nav ul li a{
+  color: #fff;
+  display: block;
+  background: rgba(0,0,0,6);
+  margin-bottom: 10px; 
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px 10px 10px 0;
+  font-size: .9rem;
+  text-decoration: none;
+
+}
+
+header.primary nav ul li a:hover{
+  background: pink;
+}
 div.hgroup h1 a{
   color: #fff;
   text-decoration: none;
@@ -47,4 +72,15 @@ div.hgroup h1 a{
 
 div.hgroup h2{
   color: #fff;
+}
+
+.hgroup h1, .hgroup h2{
+  margin:0;
+}
+
+#content h2, #content h3{
+  color:  white;
+  border-left: 10px solid #fff;
+  border-radius: 20px;
+  padding: 5px;
 }
