@@ -4,12 +4,12 @@
 </head>
 <h1>New Patient Registration</h1>
 <section id="personal">
-<form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+<form class= "formlabel" id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
     <div id="first-name">
         <label for="first-name">First Name: </label>
         <input type="text" id="first-name" name="first-name" size="30" maxlength="10">
     </div>
-    <div id="middle-initial"></div>
+    <div id="middle-initial">
         <label for="middle-initial">Middle Initial: </label>
         <input type="text" id="middle-initial" name="middle-initial" size="30" maxlength="1">
     </div>
@@ -23,10 +23,13 @@
     </div>
     <div id="sex">
         <label>Sex: </label>
-        <label for="Male"><input type="radio" name="sex" id="Male" value="Male">Male</label>
-        <label for="Female"><input type="radio" name="sex" id="Female" value="Female">Female</label>
-        <label for="N/A"><input type="radio" name="sex" id="N/A" value="Female">N/A</label>
-
+        <label for="Male"><input type="radio" name="sex" id=mMale" value="m">Male</label>
+        <label for="Female"><input type="radio" name="sex" id="female" value="f">Female</label>
+        <label for="N/A"><input type="radio" name="sex" id="n/a" value="n">N/A</label>
+    </div>
+    <div id="middle-initial">
+        <label for="middle-initial">Middle Initial: </label>
+        <input type="text" id="middle-initial" name="middle-initial" size="30" maxlength="1">
     </div>
 </form>
 
