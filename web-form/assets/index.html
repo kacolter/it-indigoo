@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-
+<head>
+    <link href="../assets/style.css" rel="stylesheet">
+</head>
 <h1>New Patient Registration</h1>
 <section id="personal">
-    <div id="first-name">
 <form id="SubmitExampleForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-<input type="submit" value="SubmitExample" Name="SubmitButton">
-<label for="first-name">First Name: </label>
-<input type="text" id="first-name" name="first-name" size="30" maxlength="10">
-</div>
-<div id="last-name"></div>
-<input type="submit" value="SubmitExample" Name="SubmitButton">
-<label for="last-name">Last Name: </label>
-<input type="text" id="last-name" name="last-name" size="30" maxlength="10">
-</div>
+    <div id="first-name">
+        <input type="submit" value="SubmitExample" Name="SubmitButton">
+        <label for="first-name">First Name: </label>
+        <input type="text" id="first-name" name="first-name" size="30" maxlength="10">
+    </div>
+    <div id="middle-initial"></div>
+        <input type="submit" value="SubmitExample" Name="SubmitButton">
+        <label for="middle-initial">Middle Initial: </label>
+        <input type="text" id="middle-initial" name="middle-initial" size="30" maxlength="1">
+    </div>
+    <div id="last-name"></div>
+        <input type="submit" value="SubmitExample" Name="SubmitButton">
+        <label for="last-name">Last Name: </label>
+        <input type="text" id="last-name" name="last-name" size="30" maxlength="10">
+    </div>
+    <div id="email"></div>
+        <input type="submit" value="SubmitExample" Name="SubmitButton">
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" size="30" maxlength="1">
+    </div>
+    <div id="sex">
+        <input type="submit" value="RadioExample" name="RadioButton">
+        <label>Sex: </label>
+        <label for="Male"><input type="radio" name="sex" id="Male" value="Male">Male</label>
+        <label for="Female"><input type="radio" name="sex" id="Female" value="Female">Female</label>
+    </div>
 </form>
 
 </div>
