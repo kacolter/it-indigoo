@@ -2,8 +2,25 @@
 <html lang="en">
     <head>
         <meta name="author" content="Kylie Colter" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
 
     </head>
+<body>
+    <form id="SubmitExampleValidateForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+    <label for="FirstName" class="formlabel">First Name: </label>
+    <input type="text" id="FirstName" name="FirstName" size="30" maxlength="30"
+          data-rule-required="true"  data-msg-required="First Name is Required" >
+    <label for="FirstName" class="error"></label>
+<br/>
+<input type="submit" value="Submit Employee Form">
+</form>
+</body>
+
+<script>
+$( "#SubmitExampleValidateForm" ).validate({
+
+});
+</script>
 </html>
