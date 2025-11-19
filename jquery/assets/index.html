@@ -17,7 +17,7 @@
 
     <label for="middle-initial" class="formlabel">Middle Initial: </label>
     <input type="text" id="middle-initial" name="middle-initial" size="30" maxlength="1">
-
+<br/>
     <label for="last-name" class="formlabel">Last Name: </label>
     <input type="text" id="LastName" name="LastName" size="30" maxlength="30"
          data-rule-required="true"  data-msg-required="Last Name is Required" >
@@ -29,33 +29,32 @@
             data-rule-required="true"  data-msg-required="Email is Required" data-msg-email="Invalid Email">
         <label for="last-name" class="error"></label>
 <br/>
-    <input type="submit" value="sex" name="sex">
-    <label>Cars: </label>
+    <label>Sex: </label>
     <label for="male"><input type="radio" name="sex" id="male" value="male">Male</label>
     <label for="female"><input type="radio" name="sex" id="female" value="female">Female</label>
     <label for="n/a"><input type="radio" name="sex" id="n/a" value="n/a">N/A</label>
 </br>
-    <label for="birthday" class="formlabel">Last Name: </label>
+    <label for="birthday" class="formlabel">Birthday: </label>
     <input type="text" id="birthday" name="birthday" size="30" maxlength="6"
-         data-rule-required="true"  data-msg-required="Birthday is Required" >
+         data-rule-required="true"  data-msg-required="Birthday is Required" data-msg-date="Date must be MM/DD/YYYY format">
     <label for="birthday" class="error"></label>
 </br>
-    <label for="height" class="formlabel">Last Name: </label>
-    <input type="text" id="height" name="height" size="30" maxlength="30"
+    <label for="height" class="formlabel">Height: </label>
+    <input type="text" id="height" name="height" size="30" maxlength="30" 
          data-rule-required="true"  data-msg-required="Height is Required" >
     <label for="height" class="error"></label>
 </br>
     <label for="weight" class="formlabel">Weight: </label>
     <input type="text" id="weight" name="weight" size="30" maxlength="30"
-         data-rule-required="true"  data-msg-required="Weight is Required" >
+         data-rule-required="true"  data-msg-required="Weight is Required" data-rule-number="true" data-msg-min="Weight must be 10 pounds or greater" data-msg-max="Weight must be 500 pounds or less">
     <label for="weight" class="error"></label>
 </br>
-    <label for="phone" class="formlabel">Weight: </label>
+    <label for="phone" class="formlabel">Phone Number: </label>
     <input type="text" id="phone" name="phone" size="30" maxlength="30"
          data-rule-required="true"  data-msg-required="Phone Number is Required" >
     <label for="phone" class="error"></label>
 </br>
-    <label for="marital-status" class="formlabel" id="marital-status-label">Location: </label>
+    <label for="marital-status" class="formlabel" id="marital-status-label">Marital Status: </label>
     <select id="marital-status" name="marital-status"
         data-rule-required="true" data-msg-required="Marital Status is Required">
     <option value="">Select a Status...</option>
@@ -73,7 +72,7 @@
     <label for="address" class="error"></label>
 </br>
     <label for="city" class="formlabel">City/State/Zip: </label>
-    <input type="text" id="city" name="city" size="30" maxlength="30">
+    <input type="text" id="city" name="city" size="30" maxlength="30"
          data-rule-required="true"  data-msg-required="City is Required" >
     <label for="city" class="error"></label>
 </br>
@@ -87,7 +86,6 @@
         data-rule-max="10" data-msg-max="Number of Dependents must be less than or equal to 10">
     <label for="zip" class="error"></label>
 </br>
-    <input type="submit" value="medication" name="medication">
     <label>Taking Medications: </label>
     <label for="yes"><input type="radio" name="medication" id="yes" value="male">Yes</label>
     <label for="no"><input type="radio" name="medication" id="no" value="female">No</label>
