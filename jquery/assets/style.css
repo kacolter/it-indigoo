@@ -1,0 +1,19 @@
+.formlabel {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        padding: 5px;
+        font-weight: bold;
+    }
+ #contact, #medications{
+    border-top: 1px solid black;
+    padding: 15px;
+}
+
+#personal{
+    padding: 15px;
+}
+
+h1{
+    margin-bottom: 0px;
+}
