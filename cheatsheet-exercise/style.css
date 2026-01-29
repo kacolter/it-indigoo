@@ -11,8 +11,9 @@ html {
 
 body{
   font-family: 'Lato', sans-serif;
-  background:#c0c0c0;
+  background:#0C3033;
   padding:20px;
+  color: #fff;
 }
 
 label, input {
@@ -24,8 +25,8 @@ header h1{
 }
 
 section[id]{
-  border:6px solid rgba(0,0,0,.4);
-  background:#fff;
+  border:6px solid #C5D9DB;
+  background:#25575C;
   border-radius:12px;
   margin:40px auto;
   padding:20px;
@@ -34,7 +35,7 @@ section[id]{
 }
 
 h2.section-heading{
-   border-bottom:2px solid #c0c0c0;
+   border-bottom:2px solid #C5CCDB;
 }
 
 .section-heading{
@@ -42,7 +43,7 @@ h2.section-heading{
 }
 
 h3.section-heading{
-  border-top:2px solid #c0c0c0;
+  border-top:2px solid #C5CCDB;
   padding-top:20px;
 }
 
@@ -58,7 +59,7 @@ h2.section-heading + h3.section-heading {
 }
 .markup{
   flex: 1 70%;
-  background-color:lightgrey;
+  background-color: #032F33;
   padding:10px;
   margin-bottom:40px;
   overflow:auto;
@@ -76,7 +77,7 @@ pre[class*="language-"] {
 	color: black;
 	background: none;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: "Roboto Condensed", sans-serif;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
