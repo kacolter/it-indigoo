@@ -10,9 +10,9 @@
             if ($("#CircleForm").valid()) {
                 
                  document.getElementById("radius").innerHTML = "";
-                 document.getElementById("area").innerHTML = area.toString();
-                 document.getElementById("diameter").innerHTML = diameter.toString();
-                 document.getElementById("circumference").innerHTML = circ.toString();
+                 document.getElementById("area").innerHTML = "";
+                 document.getElementById("diameter").innerHTML = "";
+                 document.getElementById("circumference").innerHTML = "";
 
 
                  let radius; // string representation of the leg1
@@ -34,11 +34,11 @@
 
                  area = calcArea(radiusfp);
 
-                 // display the hypotenuse
+                 
+                 document.getElementById("radius").innerHTML = "";
                  document.getElementById("area").innerHTML = area.toString();
                  document.getElementById("diameter").innerHTML = diameter.toString();
                  document.getElementById("circumference").innerHTML = circ.toString();
-
 
             }
         }
@@ -50,21 +50,21 @@
 
           function calcCircumference (radiusfp)
           {
-            return ((2 * Math.pi) * radiusfp);
+            return (2 * Math.PI * radiusfp);
           }
 
           function calcArea(radiusfp)
           {
-            return ((Math.pi * radiusfp) * radiusfp);
+            return (Math.PI * radiusfp * radiusfp);
           }
           
           function clearForm()
         {
-            document.getElementById("leg1").value = "";
-            document.getElementById("leg1error").innerHTML = "";
-            document.getElementById("leg2").value = "";
-            document.getElementById("leg2error").innerHTML = "";
-            document.getElementById("hypotenuse").innerHTML = "";
+            document.getElementById("radius").value = "";
+            document.getElementById("radiuserror").innerHTML = "";
+            document.getElementById("area").value = "";
+            document.getElementById("diameter").value = "";
+            document.getElementById("circumference").value = "";
         }
 
  
