@@ -30,23 +30,20 @@ function calculate() {
         
         /* if the operator was "Min" then set result to the minimum */
         if (operator == "Plus") {
-            if(operand1fp <= operand2fp && operand1fp <= operand3fp) {
-                result = (operand1fp + operand2fp);
+                result = operand1fp + operand2fp;
         }
  
         /* if the operator was "Max" then set result to the maximum */
         if (operator == "Minus") {
-            if(operand1fp >= operand2fp && operand1fp >= operand3fp) {
-                result = (operand1fp - operand2fp);
+                result = operand1fp - operand2fp;
         }
 
         if (operator == "Mult") {
-            if(operand1fp >= operand2fp && operand1fp >= operand3fp) {
-                result = (operand1fp * operand2fp);
+                result = operand1fp * operand2fp;
         }
 
         if (operator == "Divide") {
-                result = (operand1fp / operand2fp);
+                result = operand2fp === 0 ? "Cannot divide by zero" : operand1fp / operand2fp;
         }
         
         /* convert the result to a string and display it */
@@ -59,14 +56,12 @@ function clearform() {
     /* Set all of the form values to blank or false */
     document.getElementById("Operand1").value = "";
     document.getElementById("Operand2").value = "";
-    document.getElementById("Operand3").value = "";
     document.getElementById("Operand1Error").innerHTML = "";
     document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("Operand3Error").innerHTML = "";
-    document.getElementById("MinOperator").checked = false;
-    document.getElementById("MaxOperator").checked = false;
-    document.getElementById("AvgOperator").checked = false;
-    document.getElementById("OperatorError").innerHTML = "";
+    document.getElementById("PlusOperator").checked = false;
+    document.getElementById("MinusOperator").checked = false;
+    document.getElementById("MultOperator").checked = false;
+    document.getElementById("DivideError").innerHTML = "";
     document.getElementById("Result").innerHTML = "";
 }
 
