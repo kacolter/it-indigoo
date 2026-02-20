@@ -1,28 +1,31 @@
 /* The following should be a file in your js or script folder */
         "use strict";
 
-        $( "#TriangleForm" ).validate({
+        $( "#CircleForm" ).validate({
 
         });
         
-        function displayHypotenuse() {
+        function displayResult() {
             // if the form is valid, then make the calculations
-            if ($("#TriangleForm").valid()) {
+            if ($("#CircleForm").valid()) {
                 
-                 document.getElementById("hypotenuse").innerHTML = "";
+                 document.getElementById("radius").innerHTML = "";
+                 document.getElementById("area").innerHTML = area.toString();
+                 document.getElementById("diameter").innerHTML = diameter.toString();
+                 document.getElementById("circumference").innerHTML = circ.toString();
+
 
                  let radius; // string representation of the leg1
                  let radiusfp; // floating point value of leg1
                  let diameter; // string representation of the leg1
                  let area; // floating point value of leg1
                  let circ;  // floating point hypotenuse
-                 let result; // displayable result
 
                  // read in the legs as a string
                  radius = document.getElementById("radius").value;
 
                  // Convert numbers from strings to Floating Point
-                 radiusfp = parseFloat( radius ); 
+                 radiusfp = parseFloat(radius); 
 
                  // calculate the hypotenuse
                  diameter = calcDiameter(radiusfp);
@@ -32,7 +35,11 @@
                  area = calcArea(radiusfp);
 
                  // display the hypotenuse
-                 document.getElementById("hypotenuse").innerHTML = hypotenuse.toString();
+                 document.getElementById("area").innerHTML = area.toString();
+                 document.getElementById("diameter").innerHTML = diameter.toString();
+                 document.getElementById("circumference").innerHTML = circ.toString();
+
+
             }
         }
 
@@ -59,4 +66,5 @@
             document.getElementById("leg2error").innerHTML = "";
             document.getElementById("hypotenuse").innerHTML = "";
         }
+
  
