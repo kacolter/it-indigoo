@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Carousel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <main>
+    <!--
+      section[aria-roledescription="carousel"] identifies this region as a carousel to AT.
+      aria-live="polite" on the announcer lets screen readers announce slide changes
+      without interrupting ongoing speech.
+    -->
+    <section
+      class="carousel-section"
+      aria-roledescription="carousel"
+      aria-label="Nature photography gallery"
+    >
+
+      <!-- Live region: screen readers announce the active slide on change -->
+      <p class="sr-only" aria-live="polite" aria-atomic="true" id="slideAnnouncer"></p>
+
+      <!-- Autoplay toggle — WCAG 2.1 SC 2.2.2 requires user control over motion -->
+      <div class="carousel-toolbar" aria-label="Carousel options">
+        <button
+          class="autoplay-btn"
+          id="autoplayBtn"
+          type="button"
+          aria-label="Pause auto-rotation"
+          aria-pressed="true"
+        >
+          <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <rect x="5"  y="4" width="4" height="16" rx="1"/>
+            <rect x="15" y="4" width="4" height="16" rx="1"/>
+          </svg>
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M6 4l14 8-14 8V4z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Slide list -->
+      <div class="carousel-track-wrapper">
+        <ul class="carousel-track" id="carouselTrack" aria-label="Slides">
+
+          <li
+            class="slide active"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="1 of 5: Highland Dawn"
+            data-index="0"
+          >
+            <figure class="slide-figure">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
+                alt="Mountain peaks glowing orange at sunrise against a pale sky"
+                width="1200" height="675"
+                loading="eager"
+              />
+              <figcaption class="slide-caption">
+                <span class="caption-number" aria-hidden="true">01</span>
+                <h2>Highland Dawn</h2>
+                <p>Where peaks dissolve into light</p>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li
+            class="slide"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="2 of 5: Still Waters"
+            aria-hidden="true"
+            data-index="1"
+          >
+            <figure class="slide-figure">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80"
+                alt="A misty forest reflected perfectly in a glassy lake at dawn"
+                width="1200" height="675"
+                loading="lazy"
+              />
+              <figcaption class="slide-caption">
+                <span class="caption-number" aria-hidden="true">02</span>
+                <h2>Still Waters</h2>
+                <p>Silence held between the trees</p>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li
+            class="slide"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="3 of 5: Gilded Dunes"
+            aria-hidden="true"
+            data-index="2"
+          >
+            <figure class="slide-figure">
+              <img
+                src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1200&q=80"
+                alt="Rolling sand dunes casting long shadows in warm golden-hour light"
+                width="1200" height="675"
+                loading="lazy"
+              />
+              <figcaption class="slide-caption">
+                <span class="caption-number" aria-hidden="true">03</span>
+                <h2>Gilded Dunes</h2>
+                <p>Sand sculpted by ancient winds</p>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li
+            class="slide"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="4 of 5: Edge of the World"
+            aria-hidden="true"
+            data-index="3"
+          >
+            <figure class="slide-figure">
+              <img
+                src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&q=80"
+                alt="Dramatic sea cliffs plunging into a deep blue ocean at dusk"
+                width="1200" height="675"
+                loading="lazy"
+              />
+              <figcaption class="slide-caption">
+                <span class="caption-number" aria-hidden="true">04</span>
+                <h2>Edge of the World</h2>
+                <p>Cliffs that meet the endless sea</p>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li
+            class="slide"
+            role="group"
+            aria-roledescription="slide"
+            aria-label="5 of 5: Frozen Canopy"
+            aria-hidden="true"
+            data-index="4"
+          >
+            <figure class="slide-figure">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80"
+                alt="Snow-laden pine trees standing tall in a silent winter forest"
+                width="1200" height="675"
+                loading="lazy"
+              />
+              <figcaption class="slide-caption">
+                <span class="caption-number" aria-hidden="true">05</span>
+                <h2>Frozen Canopy</h2>
+                <p>Winter's quiet architecture</p>
+              </figcaption>
+            </figure>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Navigation controls -->
+      <nav class="carousel-nav" aria-label="Carousel controls">
+
+        <button
+          class="nav-btn prev"
+          id="prevBtn"
+          type="button"
+          aria-label="Previous slide"
+          aria-controls="carouselTrack"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               aria-hidden="true" focusable="false">
+            <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!--
+          role="tablist" + role="tab" on each dot is the recommended ARIA pattern
+          for carousel pickers. tabindex is managed in JS (roving tabindex).
+        -->
+        <div class="dots" role="tablist" aria-label="Select slide" id="dotList">
+          <button role="tab" class="dot active" type="button"
+            aria-selected="true"  aria-controls="carouselTrack"
+            aria-label="Slide 1: Highland Dawn"     data-index="0" tabindex="0"></button>
+          <button role="tab" class="dot" type="button"
+            aria-selected="false" aria-controls="carouselTrack"
+            aria-label="Slide 2: Still Waters"      data-index="1" tabindex="-1"></button>
+          <button role="tab" class="dot" type="button"
+            aria-selected="false" aria-controls="carouselTrack"
+            aria-label="Slide 3: Gilded Dunes"      data-index="2" tabindex="-1"></button>
+          <button role="tab" class="dot" type="button"
+            aria-selected="false" aria-controls="carouselTrack"
+            aria-label="Slide 4: Edge of the World" data-index="3" tabindex="-1"></button>
+          <button role="tab" class="dot" type="button"
+            aria-selected="false" aria-controls="carouselTrack"
+            aria-label="Slide 5: Frozen Canopy"     data-index="4" tabindex="-1"></button>
+        </div>
+
+        <button
+          class="nav-btn next"
+          id="nextBtn"
+          type="button"
+          aria-label="Next slide"
+          aria-controls="carouselTrack"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               aria-hidden="true" focusable="false">
+            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </nav>
+
+      <!-- Progress bar: decorative, hidden from assistive technology -->
+      <div class="progress-bar" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="assets/js/carousel.js"></script>
+</body>
+</html>
