@@ -1,0 +1,170 @@
+:root{
+  --primary-type-color: #000;
+  --secondary-type-color: #F2EFE8;
+  --heading-type-color: #332F0B;
+  --accent-color-1: #BBB791;
+  --accent-color-2: #A6BA91;
+  --link-color: #5A7A10;
+}
+
+/** mobile **/
+#home main.container{
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
+}
+
+
+nav, footer{
+  margin: 0 auto;
+}
+
+/** home **/
+
+#home article.heading{
+  grid-area: "header";
+}
+
+header.primary{
+  margin-top: 0px;
+  text-align: center;
+
+}
+#home #content{
+  grid-area: "content";
+}
+
+footer.primary{
+  grid-area: "footer";
+  text-align: center;
+}
+
+nav ul{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+
+}
+
+nav li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a:link, nav a:visited{
+  text-decoration: none; 
+  font-size: .9em;
+  font-weight: 600;
+}
+
+nav a:link{
+  color: var(--heading-type-color);
+}
+
+nav a:visited{
+  color: #fff;
+}
+
+nav a:hover{
+  color: #fff;
+  transition: color 0.7s ease;
+}
+
+body{
+  background-color: #F2EFE8;
+  font-family: "Mulish", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent-color-1);
+}
+nav a{
+  padding: 0;
+  margin: 0;
+}
+
+#home .heading{
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+#home #content h2{
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  color: var(--heading-type-color);
+  font-size: 30px;
+}
+
+#home h3{
+  border-bottom: 2px solid var(--accent-color-1);
+  padding: 0 0 10px 0;
+}
+a{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a:link{
+  color: var(--link-color);
+}
+
+footer a:link{
+  color: var(--heading-type-color);
+}
+footer a:visited{
+  color: #fff;
+}
+
+footer a:hover{
+  color: #fff;
+  transition: color 0.7s ease;
+}
+
+
+footer{
+  background-color: var(--accent-color-1);
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 10px 7px 10px 7px;
+
+}
+
+#home .container{
+  margin: 25px;
+  margin-bottom: 50px;
+}
+
+#home .container h2{
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+#home #general h4{
+  text-align: center;
+}
+
+#home #general a:hover{
+  color: var(--heading-type-color);
+  transition: color 0.7s ease;
+}
+
+footer #header{
+  color: #fff;
+}
+
