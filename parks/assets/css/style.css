@@ -63,6 +63,8 @@ nav a:link, nav a:visited{
   font-weight: 600;
 }
 
+
+
 nav a:link{
   color: var(--heading-type-color);
 }
@@ -97,10 +99,7 @@ nav a{
 
 #home .heading{
   text-align: center;
-  margin-top: 70px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
+  margin: 100px 25px 25px 25px;
 }
 
 #home #content h2{
