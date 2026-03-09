@@ -168,6 +168,9 @@ footer{
   transition: color 0.7s ease;
 }
 
+#home #general a:visited{
+  color: var(--accent-color-1);
+}
 footer #header{
   color: #fff;
 }
