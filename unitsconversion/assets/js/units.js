@@ -8,39 +8,69 @@ function calculate() {
     if (form.valid()) {
         
         // Operand 1
-        let operand1 = document.getElementById("Operand1").value;
+        let FromValue = document.getElementById("FromValue").value;
 
         // Operator
         // Get the value associated with the operator that was checked (+, -, *, or /)
-        let operator;
-        if (document.getElementById("AddOperator").checked) {
-            operator = document.getElementById("AddOperator").value;
+        let FromUnit;
+        if (document.getElementById("cmOperator").checked) {
+            operator = document.getElementById("cmOperator").value;
         }
-        if (document.getElementById("SubtractOperator").checked) {
-            operator = document.getElementById("SubtractOperator").value;
+        if (document.getElementById("mOperator").checked) {
+            operator = document.getElementById("mOperator").value;
         }
-        if (document.getElementById("MultiplyOperator").checked) {
-            operator = document.getElementById("MultiplyOperator").value;
+        if (document.getElementById("kiOperator").checked) {
+            operator = document.getElementById("kiOperator").value;
         }
-        if (document.getElementById("DivideOperator").checked) {
-            operator = document.getElementById("DivideOperator").value;
+        if (document.getElementById("inOperator").checked) {
+            operator = document.getElementById("inOperator").value;
         }
-        
-        // Operand 2
-        let operand2 = document.getElementById("Operand2").value;
+        if (document.getElementById("ftOperator").checked) {
+            operator = document.getElementById("ftOperator").value;
+        }
+        if (document.getElementById("ydOperator").checked) {
+            operator = document.getElementById("ydOperator").value;
+        }
+        if (document.getElementById("miOperator").checked) {
+            operator = document.getElementById("miOperator").value;
+        }
 
-        CalculateResult(operand1, operator, operand2);
+        let ToUnit;
+        if (document.getElementById("cmOperator").checked) {
+            operator = document.getElementById("cmOperator").value;
+        }
+        if (document.getElementById("mOperator").checked) {
+            operator = document.getElementById("mOperator").value;
+        }
+        if (document.getElementById("kiOperator").checked) {
+            operator = document.getElementById("kiOperator").value;
+        }
+        if (document.getElementById("inOperator").checked) {
+            operator = document.getElementById("inOperator").value;
+        }
+        if (document.getElementById("ftOperator").checked) {
+            operator = document.getElementById("ftOperator").value;
+        }
+        if (document.getElementById("ydOperator").checked) {
+            operator = document.getElementById("ydOperator").value;
+        }
+        if (document.getElementById("miOperator").checked) {
+            operator = document.getElementById("miOperator").value;
+        }
+
+
+        CalculateResult(FromUnit, ToUnit);
     }
 }
 
-async function CalculateResult(operand1, operator, operand2) {
+async function CalculateResult(FromValue, FromUnit, ToUnit) {
     "use strict;"
         
         // URL and method used with AJAX Call
         let myURL = "https://brucebauer.info/assets/ITEC3650/ajaxcalculator.php";
 
         /* AJAX calculator requires Operand1, Operator, and Operand2 */
-        myURL = myURL + "?Operand1=" + encodeURIComponent(operand1) + "&Operator=" + encodeURIComponent(operator) + "&Operand2=" + encodeURIComponent(operand2);
+        myURL = myURL + "?FromValue=" + encodeURIComponent(FromUnit) + "&Operator=" + encodeURIComponent(FromUnit) + "&ToUnit" + encodeURIComponent(operand2);
 
         /* fetch the results */
         let myCalcObject = await fetch(myURL);
@@ -53,15 +83,15 @@ function clearform() {
     "use strict";
     
     /* Set all of the form values to blank or false */
-    document.getElementById("Operand1").value = "";
-    document.getElementById("Operand1Msg").innerHTML = "";
+    document.getElementById("FromValue").value = "";
+    document.getElementById("FromValueMsg").innerHTML = "";
     document.getElementById("AddOperator").checked = false;
     document.getElementById("SubtractOperator").checked = false;
     document.getElementById("MultiplyOperator").checked = false;
     document.getElementById("DivideOperator").checked = false;
     document.getElementById("OperatorMsg").innerHTML = "";
-    document.getElementById("Operand2").value = "";
-    document.getElementById("Operand2Msg").innerHTML = "";
+    document.getElementById("ToValue").value = "";
+    document.getElementById("ToValueMsg").innerHTML = "";
     document.getElementById("Result").innerHTML = "";
 }
 
