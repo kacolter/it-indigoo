@@ -12,54 +12,9 @@ function calculate() {
 
         // Operator
         // Get the value associated with the operator that was checked (+, -, *, or /)
-        let FromUnit;
-        if (document.getElementById("cmOperator").checked) {
-            operator = document.getElementById("cmOperator").value;
-        }
-        if (document.getElementById("mOperator").checked) {
-            operator = document.getElementById("mOperator").value;
-        }
-        if (document.getElementById("kiOperator").checked) {
-            operator = document.getElementById("kiOperator").value;
-        }
-        if (document.getElementById("inOperator").checked) {
-            operator = document.getElementById("inOperator").value;
-        }
-        if (document.getElementById("ftOperator").checked) {
-            operator = document.getElementById("ftOperator").value;
-        }
-        if (document.getElementById("ydOperator").checked) {
-            operator = document.getElementById("ydOperator").value;
-        }
-        if (document.getElementById("miOperator").checked) {
-            operator = document.getElementById("miOperator").value;
-        }
-
-        let ToUnit;
-        if (document.getElementById("cmOperator").checked) {
-            operator = document.getElementById("cmOperator").value;
-        }
-        if (document.getElementById("mOperator").checked) {
-            operator = document.getElementById("mOperator").value;
-        }
-        if (document.getElementById("kiOperator").checked) {
-            operator = document.getElementById("kiOperator").value;
-        }
-        if (document.getElementById("inOperator").checked) {
-            operator = document.getElementById("inOperator").value;
-        }
-        if (document.getElementById("ftOperator").checked) {
-            operator = document.getElementById("ftOperator").value;
-        }
-        if (document.getElementById("ydOperator").checked) {
-            operator = document.getElementById("ydOperator").value;
-        }
-        if (document.getElementById("miOperator").checked) {
-            operator = document.getElementById("miOperator").value;
-        }
-
-
-        CalculateResult(FromUnit, ToUnit);
+    let FromUnit = $("input[name='FromUnit']:checked").val();
+    let ToUnit = $("input[name='ToUnit']:checked").val();
+        CalculateResult(FromValue, FromUnit,ToUnit);
     }
 }
 
@@ -67,16 +22,15 @@ async function CalculateResult(FromValue, FromUnit, ToUnit) {
     "use strict;"
         
         // URL and method used with AJAX Call
-        let myURL = "https://brucebauer.info/assets/ITEC3650/ajaxcalculator.php";
+        let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
 
         /* AJAX calculator requires Operand1, Operator, and Operand2 */
-        myURL = myURL + "?FromValue=" + encodeURIComponent(FromUnit) + "&Operator=" + encodeURIComponent(FromUnit) + "&ToUnit" + encodeURIComponent(operand2);
-
+         myURL = myURL + "?FromValue=" + encodeURIComponent(FromValue) + "&FromUnit=" + encodeURIComponent(FromUnit) + "&ToUnit=" + encodeURIComponent(ToUnit);
         /* fetch the results */
         let myCalcObject = await fetch(myURL);
         let myResult = await myCalcObject.text();
         
-        document.getElementById("Result").innerHTML = myResult;
+        document.getElementById("ToValue").innerHTML = myResult;
 }
 
 function clearform() {
@@ -85,14 +39,23 @@ function clearform() {
     /* Set all of the form values to blank or false */
     document.getElementById("FromValue").value = "";
     document.getElementById("FromValueMsg").innerHTML = "";
-    document.getElementById("AddOperator").checked = false;
-    document.getElementById("SubtractOperator").checked = false;
-    document.getElementById("MultiplyOperator").checked = false;
-    document.getElementById("DivideOperator").checked = false;
+    document.getElementById("fromCM").checked = false;
+    document.getElementById("fromM").checked = false;
+    document.getElementById("fromKI").checked = false;
+    document.getElementById("fromIN").checked = false;
+    document.getElementById("fromFT").checked = false;
+    document.getElementById("fromYD").checked = false;
+    document.getElementById("fromMI").checked = false;
+    document.getElementById("toCM").checked = false;
+    document.getElementById("toM").checked = false;
+    document.getElementById("toKI").checked = false;
+    document.getElementById("toIN").checked = false;
+    document.getElementById("toFT").checked = false;
+    document.getElementById("toYD").checked = false;
+    document.getElementById("toMI").checked = false;
     document.getElementById("OperatorMsg").innerHTML = "";
-    document.getElementById("ToValue").value = "";
+    document.getElementById("ToValue").innerHTML = "";
     document.getElementById("ToValueMsg").innerHTML = "";
-    document.getElementById("Result").innerHTML = "";
 }
 
 $( "#myform" ).validate({
