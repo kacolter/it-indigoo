@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Value History</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Currency Value History</h1>
+
+        <form id="currencyForm">
+            <label>From Currency:</label>
+            <select id="FromCurrency">
+            <option value="">Select</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            </select>
+
+            <label>To Currency:</label>
+            <select id="toCurrency">
+            <option value="">Select</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            </select>
+
+            <label for="FromDate" class="formlabel">From Date:</label>
+            <input type="date" name="FromDate" id="FromDate" 
+                data-rule-required="true" data-msg-required="From Date is Required">
+            <label id="FromDateError" for="FromDate" class="error"></label>
+            <label for="ToDate" class="formlabel">To Date:</label>
+            <input type="date" name="ToDate" id="ToDate" 
+                    data-rule-required="true" data-msg-required="To Date is Required">
+            <label id="ToDateError" for="ToDate" class="error"></label>
+            <br><br>
+            <div class="buttons">
+                <button type="submit">Get Data</button>
+                <button type="button" id="clear">Clear</button>
+            </div>
+            <hr>
+            <br>
+            <hr>
+                <div class="img-container">
+                    <canvas id="chartjs-1" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+</body>
+</html>
