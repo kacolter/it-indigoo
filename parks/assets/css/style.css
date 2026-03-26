@@ -19,31 +19,50 @@
     ;
 }
 
-
-nav, footer{
+#lodging main.container{
+  max-width: 420px;
   margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
+}
+#faq main.container{
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
 }
 
-/** home **/
 
-#home article.heading{
-  grid-area: "header";
+/* global styles */
+nav, footer{
+  margin: 0 auto;
 }
 
 header.primary{
   margin-top: 0px;
   text-align: center;
-
-}
-#home #content{
-  grid-area: "content";
 }
 
-footer.primary{
-  grid-area: "footer";
-  text-align: center;
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent-color-1);
 }
 
+nav a{
+  padding: 0;
+  margin: 0;
+}
 nav ul{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -63,8 +82,6 @@ nav a:link, nav a:visited{
   font-weight: 600;
 }
 
-
-
 nav a:link{
   color: var(--heading-type-color);
 }
@@ -78,46 +95,6 @@ nav a:hover{
   transition: color 0.7s ease;
 }
 
-body{
-  background-color: #F2EFE8;
-  font-family: "Mulish", sans-serif;
-  margin: 0%;
-  padding: 0%;
-}
-
-nav{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--accent-color-1);
-}
-nav a{
-  padding: 0;
-  margin: 0;
-}
-
-#home .heading{
-  text-align: center;
-  margin-top: 50px;
-  background-image: url(/parks/assets/img/crater_420.webp);
-  background-repeat: no-repeat;
-  color: white;
-  font-size: 1.0em;
-  padding: 30px;
-}
-
-#home #content h2{
-  text-align: center;
-  padding: 10px 5px 10px 5px;
-  color: var(--heading-type-color);
-  font-size: 30px;
-}
-
-#home h3{
-  border-bottom: 2px solid var(--accent-color-1);
-  padding: 0 0 10px 0;
-}
 a{
   list-style-type: none;
   text-decoration: none;
@@ -127,8 +104,38 @@ a:link{
   color: var(--link-color);
 }
 
-footer a:link{
+body{
+  background-color: #F2EFE8;
+  font-family: "Mulish", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+
+
+.heading{
+  text-align: center;
+  margin-top: 50px;
+  background-image: url(https://placehold.co/420x279);  
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 1.0em;
+  padding: 30px;
+}
+
+#content h2{
+  text-align: center;
+  padding: 10px 5px 10px 5px;
   color: var(--heading-type-color);
+  font-size: 30px;
+}
+
+h3{
+  border-bottom: 2px solid var(--accent-color-1);
+  padding: 0 0 10px 0;
+}
+
+footer a:link{
+  color: black;
 }
 footer a:visited{
   color: #fff;
@@ -139,28 +146,58 @@ footer a:hover{
   transition: color 0.7s ease;
 }
 
-
 footer{
   background-color: var(--accent-color-1);
   width: 100%;
   margin: 0;
   overflow: hidden;
   padding: 10px 7px 10px 7px;
-
+  text-align: center;
 }
 
-#home .container{
+.container{
   margin: 25px;
   margin-bottom: 50px;
 }
 
-#home .container h2{
+.container h2{
   margin-bottom: 50px;
   margin-top: 0;
 }
 
+
+#lodging #general a:hover, #faq #general a:hover{
+  color: var(--heading-type-color);
+  transition: color 0.7s ease;
+}
+
+#lodging #general a:visited, #faq #general a:visited{
+  color: var(--accent-color-1);
+}
+footer #header{
+  color: #fff;
+}
+
+/*-------- home -------- **/
+
+#home article.heading{
+  grid-area: "header";
+}
+
+#home #content{
+  grid-area: "content";
+}
+
+#home footer.primary{
+  grid-area: "footer";
+}
+
 #home #general h4{
   text-align: center;
+}
+
+#home #general a{
+  color: var(--link-color);
 }
 
 #home #general a:hover{
@@ -169,9 +206,33 @@ footer{
 }
 
 #home #general a:visited{
-  color: var(--accent-color-1);
-}
-footer #header{
-  color: #fff;
+  color: var(--link-color) ;
 }
 
+/*--------- lodging --------- */
+#lodging #tiers{
+  margin-top: 50px;
+}
+#lodging #first, #lodging #second{
+  background: var(--accent-color-2);
+  border: 2px solid var(--accent-color-2);
+  border-radius: 25px;
+}
+#lodging #first li, #lodging #second li{
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*--------- faq --------- */
+
+#faq #questions h3{
+  margin-top: 35px;
+}
+#faq #content h2{
+  margin-bottom: 75px;
+}
+#faq #contact{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
