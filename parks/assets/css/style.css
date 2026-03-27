@@ -7,38 +7,6 @@
   --link-color: #5A7A10;
 }
 
-/** mobile **/
-#home main.container{
-  max-width: 420px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer"
-    ;
-}
-
-#lodging main.container{
-  max-width: 420px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer"
-    ;
-}
-#faq main.container{
-  max-width: 420px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer"
-    ;
-}
 
 
 /* global styles */
@@ -116,6 +84,9 @@ body{
   text-align: center;
   margin-top: 50px;
   background-image: url(https://placehold.co/420x279);  
+  background-size: cover;
+  background-position: center;
+  min-height: 279px;
   background-repeat: no-repeat;
   color: white;
   font-size: 1.0em;
@@ -155,6 +126,7 @@ footer{
   text-align: center;
 }
 
+
 .container{
   margin: 25px;
   margin-bottom: 50px;
@@ -181,15 +153,16 @@ footer #header{
 /*-------- home -------- **/
 
 #home article.heading{
-  grid-area: "header";
+  grid-area: header;
+  
 }
 
 #home #content{
-  grid-area: "content";
+  grid-area: content;
 }
 
 #home footer.primary{
-  grid-area: "footer";
+  grid-area: footer;
 }
 
 #home #general h4{
@@ -200,10 +173,6 @@ footer #header{
   color: var(--link-color);
 }
 
-#home #general a:hover{
-  color: var(--heading-type-color);
-  transition: color 0.7s ease;
-}
 
 #home #general a:visited{
   color: var(--link-color) ;
@@ -224,6 +193,7 @@ footer #header{
   margin-bottom: 10px;
 }
 
+
 /*--------- faq --------- */
 
 #faq #questions h3{
@@ -235,4 +205,318 @@ footer #header{
 #faq #contact{
   margin-top: 50px;
   margin-bottom: 20px;
+}
+
+#home #general a:hover{
+  color: var(--heading-type-color);
+  transition: color 0.7s ease;
+}
+#faq article.heading{
+  grid-area: header;
+}
+
+#faq #content{
+  grid-area: content;
+}
+
+#faq footer.primary{
+  grid-area: footer;
+}
+/*---------- MEDIA QUIERIES ----------*/
+/* home */
+#home main.container{
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
+}
+
+@media screen and (min-width:768px){
+  #home header.primary{
+    max-width: 900px;
+  }
+  #home .heading{
+    background-image: url(https://placehold.co/768x510);
+    min-height: 510px;
+  }
+  
+  #home .heading h1{
+    margin-top: 200px;
+  }
+  
+  #home footer.primary{
+    display: grid;
+    font-size: 1.2em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+      "info back"
+      "copy copy"
+      ;
+  }
+  #back{
+    grid-area: back;
+  }
+  #info{
+    grid-area: info;
+  }
+  #home footer.primary #back{
+    margin-top: 120px;
+  }
+  
+  #home footer.primary #info{
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  #home footer.primary h6{
+    text-align: center;
+    grid-area: copy;
+  }
+  #home main.container{
+    max-width: 900px;
+    grid-template-areas: 
+      "header header"
+      "content content"
+      "footer footer"
+      ;
+  }
+}
+@media screen and (min-width:992px){
+  #home header.primary{
+    max-width: 1124px;
+  }
+  #home main.container{
+    max-width: 1124px;
+  }
+  #home #general{
+    margin: 25px;
+  }
+}
+
+/* lodging */
+#lodging main.container{
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
+}
+@media screen and (min-width:768px){
+  #lodging header.primary{
+    max-width: 900px;
+  }
+  
+  #lodging .heading{
+    background-image: url(https://placehold.co/768x510);
+    min-height: 510px;
+  }
+  
+  #lodging .heading h1{
+    margin-top: 200px;
+  }
+  
+  #lodging footer.primary{
+    display: grid;
+    font-size: 1.2em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+      "info back"
+      "copy copy"
+      ;
+  }
+  #back{
+    grid-area: back;
+  }
+  #info{
+    grid-area: info;
+  }
+  #lodging footer.primary #back{
+    margin-top: 120px;
+  }
+  
+  #lodging footer.primary #info{
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  #lodging footer.primary h6{
+    text-align: center;
+    grid-area: copy;
+  }
+  
+  #lodging .heading{
+    grid-area: header;
+  }
+  
+  #lodging #general{
+    grid-area: general;
+  }
+  
+  #lodging #tiers{
+    grid-area: tiers;
+  }
+  
+  #lodging footer.primary{
+    grid-area: footer;
+  }
+  #lodging main.container{
+    max-width: 900px;
+    grid-template-areas: 
+      "header header"
+      "general general"
+      "tiers tiers"
+      "footer footer"
+      ;
+  }
+  
+  #lodging .one{
+    grid-area: first;
+  }
+  
+  #lodging .two{
+    grid-area: second;
+  }
+  #lodging #title{
+    grid-area: title;
+  }
+  #lodging #tiers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title title"
+      "first second"
+      ;
+  }
+  #lodging #tiers h4{
+    text-align: center;
+  }
+  #lodging #content{
+    margin: 25px;
+  }
+  #lodging #second{
+    margin-left: 50px;
+  }
+  #lodging .two h4{
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width:992px){
+  #lodging header.primary{
+    max-width: 1124px;
+  }
+  #lodging main.container{
+    max-width: 1124px;
+  }
+  #lodging #general, #lodging #tiers{
+    margin: 25px;
+  }
+}
+/* faq */
+#faq main.container{
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+    ;
+}
+
+@media screen and (min-width:768px){
+ #faq header.primary{
+    max-width: 900px;
+  }
+  #faq .heading{
+    background-image: url(https://placehold.co/768x510);
+    min-height: 510px;
+  }
+  
+  #faq .heading h1{
+    margin-top: 200px;
+  }
+  #faq #look h4{
+    color: var(--link-color);
+  }
+  #faq #look{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+      "title title"
+      "shape size"
+      "appearance color"
+      ;
+  }
+  #faq #size, #faq #color{
+    margin-left: 30px;
+  }
+  #faq #title{
+    grid-area: title;
+  }
+  #faq #shape{
+    grid-area: shape;
+  }
+  #faq #size{
+    grid-area: size;
+  }
+  #faq #appearance{
+    grid-area: appearance;
+  }
+  #faq #color{
+    grid-area: color;
+  }
+  #faq footer.primary{
+    display: grid;
+    font-size: 1.2em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+      "info back"
+      "copy copy"
+      ;
+  }
+  #back{
+    grid-area: back;
+  }
+  #info{
+    grid-area: info;
+  }
+  #faq footer.primary #back{
+    margin-top: 120px;
+  }
+  
+  #faq footer.primary #info{
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  #faq footer.primary h6{
+    text-align: center;
+    grid-area: copy;
+  }
+  #faq main.container{
+    max-width: 900px;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "footer footer"
+      ;
+  }
+}
+@media screen and (min-width:992px){
+  #faq header.primary{
+    max-width: 1124px;
+  }
+  #faq main.container{
+    max-width: 1124px;
+  }
+  #faq #questions, #faq #contact{
+    margin: 25px;
+  }
 }
