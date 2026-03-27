@@ -83,7 +83,7 @@ body{
 .heading{
   text-align: center;
   margin-top: 50px;
-  background-image: url(https://placehold.co/420x279);  
+  background-image: url("/parks/assets/img/small.webp");  
   background-size: cover;
   background-position: center;
   min-height: 279px;
@@ -240,7 +240,6 @@ footer #header{
     max-width: 900px;
   }
   #home .heading{
-    background-image: url(https://placehold.co/768x510);
     min-height: 510px;
   }
   
@@ -314,7 +313,6 @@ footer #header{
   }
   
   #lodging .heading{
-    background-image: url(https://placehold.co/768x510);
     min-height: 510px;
   }
   
@@ -435,7 +433,6 @@ footer #header{
     max-width: 900px;
   }
   #faq .heading{
-    background-image: url(https://placehold.co/768x510);
     min-height: 510px;
   }
   
@@ -513,10 +510,17 @@ footer #header{
   #faq header.primary{
     max-width: 1124px;
   }
+  
   #faq main.container{
     max-width: 1124px;
   }
   #faq #questions, #faq #contact{
     margin: 25px;
+  }
+}
+
+@media screen and (min-width:768px){
+  .heading{
+    background-image: url("/parks/assets/img/large.webp");
   }
 }
