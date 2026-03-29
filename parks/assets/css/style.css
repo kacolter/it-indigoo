@@ -182,7 +182,12 @@ footer #header{
 #lodging #tiers{
   margin-top: 50px;
 }
-
+.large{
+  display: none;
+}
+.small{
+  display: block;
+}
 #lodging #first, #lodging #second{
   background: var(--accent-color-2);
   border: 2px solid var(--accent-color-2);
@@ -317,6 +322,7 @@ footer #header{
   }
   .large{
     display: block;
+    margin-left: 40px;
   }
   #lodging .heading{
     min-height: 510px;
